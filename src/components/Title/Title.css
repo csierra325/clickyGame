@@ -1,0 +1,9 @@
+.title {
+    width: 100%;
+    text-align: center;
+    background-image: url(/images/jumbotron.jpg);
+    background-size: 1700px 550px;
+    background-repeat: no-repeat;
+    padding:20%;
+  }
+
