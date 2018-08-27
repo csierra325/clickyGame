@@ -1,43 +1,41 @@
 import React, { Component } from 'react';
 import Nav from "./components/Nav/Nav"
-import FriendCard from "./components/FriendCard";
+import CharacterCard from "./components/CharacterCard";
 import Wrapper from "./components/Wrapper";
-import friends from "./character.json";
+import characters from "./character.json";
 import Title from "./components/Title";
 import Score from "./components/Score/Score";
 import './App.css';
 
 class App extends Component {
   state = {
-    friends,
+    characters,
     score: 0,
     goal: 12,
     status: "",
-    clickedFriends: []
+    clickedCharacters: []
 
   };
   
   shuffleScoreCard = id => {
-    let clickedFriends = this.state.clickedFriends;
+    let clickedCharacters = this.state.clickedCharacters;
 
-    if(clickedFriends.includes(id)){
-      this.setState({ clickedFriends: [], score: 0, status:  "You lost. Click to play again!" });
+    if(clickedCharacters.includes(id)){
+      this.setState({ clickedCharacters: [], score: 0, status:  "You lost. Click to play again!" });
       return;
     }else{
-      clickedFriends.push(id)
+      clickedCharacters.push(id)
 
-      if(clickedFriends.length ===  12){
-        this.setState({score: 12, status: "You Won! Click to play again!", clickedfriends: []});
+      if(clickedCharacters.length ===  12){
+        this.setState({score: 12, status: "You Won! Click to play again!", clickedCharacters: []});
         console.log('You Win');
         return;
       }
 
-
-      this.setState({ friends, clickedFriends, score: clickedFriends.length, status: " " });
-
-      for (let i = friends.length - 1; i > 0; i--) {
+      this.setState({ characters, clickedCharacters, score: clickedCharacters.length, status: " " });
+      for (let i = characters.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
-        [friends[i], friends[j]] = [friends[j], friends[i]];
+        [characters[i], characters[j]] = [characters[j], characters[i]];
       }
     }
   }
@@ -46,22 +44,21 @@ class App extends Component {
     return (
       <di class = "App">
        <Nav />
-       
+     
          <Wrapper>
      
-         
          <Title/>
          <Score 
        total ={this.state.score}
        goal = {12}
        status = {this.state.status}
        />
-        {this.state.friends.map(friend => (
-          <FriendCard
+        {this.state.characters.map(character => (
+          <CharacterCard
             shuffleScoreCard = {this.shuffleScoreCard}
-            id={friend.id}
-            key={friend.id}
-            image={friend.image}
+            id={character.id}
+            key={character.id}
+            image={character.image}
           />
         ))}
       </Wrapper>

@@ -6,7 +6,7 @@ const Nav = () => (
     <a className="navbar-brand" href="/">
      Welcome to GOT Clicky Game
     </a>
-    <div className="navbar-brand">
+    <div className="navbar-brand ">
       Click on an images to earn points but dont click them twice!
     </div>
   </nav>

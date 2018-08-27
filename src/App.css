@@ -2,36 +2,20 @@
   text-align: center;
 }
 
-header {
-  padding: 12%;
-  color: black;
-
-}
 .gamescore{
   position: fixed;
 }
 
-.App-title {
-  font-size: 2em;
-  
-}
-
-.App-intro {
-  font-size: large;
-}
-
 .navbar-brand{
-  color:black;
+  color:whitesmoke;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
   margin: 10px;
   font-weight: bold;
-
+  
+}
+.navbar{
+  background-color: #314659;
+  padding: 30px;
 }
 
-
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
