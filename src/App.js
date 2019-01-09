@@ -3,7 +3,7 @@ import Nav from "./components/Nav/Nav"
 import CharacterCard from "./components/CharacterCard";
 import Wrapper from "./components/Wrapper";
 import characters from "./character.json";
-import Title from "./components/Title";
+import Music from "./components/Music";
 import Score from "./components/Score/Score";
 import './App.css';
 
@@ -42,17 +42,19 @@ class App extends Component {
 
   render() {
     return (
-      <di class = "App">
+      <div class = "App">
        <Nav />
-     
-         <Wrapper>
-     
-         <Title/>
-         <Score 
+       
+       <Score 
        total ={this.state.score}
        goal = {12}
        status = {this.state.status}
        />
+         
+         <Wrapper>
+      
+  
+   
         {this.state.characters.map(character => (
           <CharacterCard
             shuffleScoreCard = {this.shuffleScoreCard}
@@ -62,7 +64,8 @@ class App extends Component {
           />
         ))}
       </Wrapper>
-      </di>
+      <Music video="foYFiqjbPTg" autoplay="0" rel="0" modest="1" />,
+      </div>
      
      
     );
