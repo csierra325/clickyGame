@@ -1,6 +1,11 @@
 .App {
   text-align: center;
-
+  font-family: sans-serif;
+  margin-top: 5px;
+  background-image: url('/images/GOT.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .gamescore{
