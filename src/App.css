@@ -2,21 +2,13 @@
   text-align: center;
   font-family: sans-serif;
   margin-top: 5px;
-  background-image: url('/images/GOT.jpg');
+  background-image: url('https://github.com/csierra325/clickyGame/blob/master/public/images/got.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-#root {
-  text-align: center;
-  font-family: sans-serif;
-  margin-top: 5px;
-  background-image: url('/images/GOT.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
+
 .gamescore{
   position: fixed;
 }
